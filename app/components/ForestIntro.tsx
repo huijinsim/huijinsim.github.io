@@ -182,7 +182,7 @@ export default function ForestIntro({ onComplete }: { onComplete: () => void }) 
               onClick={onComplete}
               className="px-8 py-3.5 bg-[#587850] text-white/95 text-sm font-medium tracking-widest uppercase rounded-full shadow-[0_8px_20px_rgba(88,120,80,0.25)] hover:shadow-[0_8px_25px_rgba(88,120,80,0.35)] hover:-translate-y-1 transition-all duration-300 border border-[#4a6d4b] backdrop-blur-md"
             >
-              View Portfolio
+              ENTER PORTFOLIO
             </button>
           </motion.div>
         )}
