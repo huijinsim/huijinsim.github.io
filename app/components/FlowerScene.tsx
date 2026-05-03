@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { motion, AnimatePresence } from "motion/react";
-import { C, builders, buildSmall, buildGroundLeaf, buildGrass } from './FlowerBuilders';
+import { COLORS, builders, buildSmall, buildGroundLeaf, buildGrass } from './FlowerBuilders';
 
 function MiniFlowerViewer({ type }: { type: number }) {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -84,8 +84,8 @@ export default function FlowerScene() {
     mount.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(C.bg);
-    scene.fog = new THREE.FogExp2(C.bg, 0.025);
+    scene.background = new THREE.Color(COLORS.bg);
+    scene.fog = new THREE.FogExp2(COLORS.bg, 0.025);
 
     const frustumH = 8;
     const aspect = w / h;
@@ -106,7 +106,7 @@ export default function FlowerScene() {
     // Rain system
     let isRaining = false;
     let rainIntensity = 0;
-    const baseBg = new THREE.Color(C.bg);
+    const baseBg = new THREE.Color(COLORS.bg);
     const rainBg = new THREE.Color(0xb5c0c7); // Gentle cloudy sky
     const baseAmbient = 1.2;
     const rainAmbient = 0.8; // Slightly dimmer
@@ -152,7 +152,7 @@ export default function FlowerScene() {
     }
     const grassGeo = new THREE.BufferGeometry();
     grassGeo.setAttribute("position", new THREE.BufferAttribute(grassPos, 3));
-    scene.add(new THREE.Points(grassGeo, new THREE.PointsMaterial({ color: C.stem, size: 0.04, transparent: true, opacity: 0.3, sizeAttenuation: true })));
+    scene.add(new THREE.Points(grassGeo, new THREE.PointsMaterial({ color: COLORS.stem, size: 0.04, transparent: true, opacity: 0.3, sizeAttenuation: true })));
 
     // Place flowers
     const allFlowers: THREE.Group[] = [];

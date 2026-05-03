@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { motion, AnimatePresence } from "motion/react";
-import { C, builders } from './FlowerBuilders';
+import { COLORS, builders } from './FlowerBuilders';
 
 export default function ForestIntro({ onComplete }: { onComplete: () => void }) {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -30,8 +30,8 @@ export default function ForestIntro({ onComplete }: { onComplete: () => void }) 
     mount.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(C.bg);
-    scene.fog = new THREE.FogExp2(C.bg, 0.025);
+    scene.background = new THREE.Color(COLORS.bg);
+    scene.fog = new THREE.FogExp2(COLORS.bg, 0.025);
 
     const frustumH = 8;
     const aspect = w / h;
