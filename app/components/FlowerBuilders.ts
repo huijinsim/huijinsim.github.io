@@ -38,7 +38,7 @@ function stemCurve(pts: THREE.Vector3[], color: number, tapered: boolean, scale:
 }
 
 // Standard elegant teardrop leaf (Calla style)
-function buildGroundLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
+export function buildGroundLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
   const g = new THREE.Group();
   const leaf = new THREE.Shape();
   leaf.moveTo(0, 0);
@@ -52,7 +52,7 @@ function buildGroundLeaf(s: number, color: number, rotY: number, rotZ: number): 
 }
 
 // Long sweeping blade leaf (Grass style)
-function buildBladeLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
+export function buildBladeLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
   const g = new THREE.Group();
   const leaf = new THREE.Shape();
   leaf.moveTo(0, 0);
@@ -66,7 +66,7 @@ function buildBladeLeaf(s: number, color: number, rotY: number, rotZ: number): T
 }
 
 // Small round heart leaf
-function buildHeartLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
+export function buildHeartLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
   const g = new THREE.Group();
   const leaf = new THREE.Shape();
   leaf.moveTo(0, 0);
@@ -80,7 +80,7 @@ function buildHeartLeaf(s: number, color: number, rotY: number, rotZ: number): T
 }
 
 // Organic 3-lobed leaf (Anemone style)
-function buildOrganicLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
+export function buildOrganicLeaf(s: number, color: number, rotY: number, rotZ: number): THREE.Group {
   const g = new THREE.Group();
   const leaf = new THREE.Shape();
   leaf.moveTo(0, 0);
